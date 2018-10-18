@@ -1,0 +1,243 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+%\singlespacing
+%\onehalfspacing
+%\doublespacing
+%\setstretch{1.1}
+\usepackage{comment}
+\usepackage{xcolor}
+\definecolor{granata}{HTML}{831d1c}
+\definecolor{kulblue}{HTML}{116E8A}
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\fancypagestyle{myheader}{%
+  \fancyhf{}% Clear all headers/footers
+ % \fancyhead[C]{ \color{granataMy header}% Header Centred
+  \fancyhead[RE, RO]{\color{kulblue}Introduction to Plasma Dynamics}
+\fancyhead[LO,LE]{\color{kulblue}  Projects }
+  \fancyfoot[C]{\color{kulblue} -\thepage-}% Footer Centred
+  \renewcommand{\headrulewidth}{2pt}% 2pt header rule
+  \renewcommand{\headrule}{\hbox to\headwidth{%
+    \color{kulblue}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+ % \renewcommand{\footrule}{\hbox to\headwidth{%
+  %  \color{granata}\leaders\hrule height \footrulewidth\hfill}}
+}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+
+\begin{document}
+\pagestyle{myheader}
+\title{Projects Plasma Dynamics}
+\section{Classical Plasmas: Ion Acoustic Wave}
+ {\bf Contact Person: } Julia Riedl (juliamaria.riedl@kuleuven.be)\\
+
+
+\subsection{Background}
+One of the most interesting subjects in plasma dynamics is the study of the wave propagation in collisionless plasma.
+In the well known Landau damping the wave propagation in a warm collisionless plasma is studied by neglecting the ion contribution.
+However, under certain circumstances the ions are no longer negligible. This is the case with the Ion Acoustic Wave.
+\subsubsection{Reading material}
+Using: 
+\begin{itemize}
+\item Plasma Physics, Richard Fitzpatrick (available online).
+\item Introduction to Plasma Dynamics, Giovanni Lapenta.
+\item Principle of Plasma Physics, N.A Krall, A.W. Trivelpiece
+\end{itemize}
+
+familiarize yourselves with the Landau damping and the Faddeeva function.
+
+\subsection{Tasks}
+Using the theory in class and of the books above study the ion acoustic wave.
+
+\begin{enumerate}
+\item {\bf Getting started:}
+Derive the dispersion relation for Ion Acoustic Waves starting from the Vlasov equation:
+\begin{equation*}
+    \frac{\partial f_s}{\partial t}+ \mathbf{v} \cdot \frac{\partial f_s}{\partial \mathbf{x}} + \frac{q_s}{m_s}(\mathbf{E}+\mathbf{v \times B}) \cdot \frac{\partial f_s}{\partial \mathbf{v}}=0.
+\end{equation*}
+Assume a one-dimensional problem. Neglect the magnetic field and the equilibrium value of the electric field. Use only one ion species.
+\item {\bf Preparing numerical and analytical task:}
+Use the Maxwellian distribution function and incorporate the Faddeeva function into the dispersion relation. \textit{For numerical task}: Normalize the equation in a reasonable way. \textit{For analytical task:} Expand the Faddeeva function in Taylor series.
+\item {\bf Numerical task:}
+Given the Faddeeva function, solve graphically the dispersion relation. Compare the result with the case where the ion contribution is neglected.
+\item {\bf Analytical task:}
+Use the first few terms of the Taylor-expanded Faddeeva function to obtain an approximate dispersion relation.
+\end{enumerate}
+\begin{comment}
+Please try to have 3 different tasks for 3 different students
+\end{comment}
+\vfill \newpage
+
+\section{Newtonian and relativistic Plasmas: Acceleration mechanisms in Gamma Ray Bursts}
+{\bf Contact Person: } Fabio Bacchini (fabio.bacchini@kuleuven.be)
+  
+\subsection{Background and references}
+One of the most discussed mechanisms for acceleration in Gamma Ray Bursts (GRB) 
+are counter-streaming instabilities. Such instabilities in the relativistic 
+limit can be efficient accelerators. The two beams interact and in the process 
+produce very intense local fields. In the classical case, the effect is mild, 
+leading to weak acceleration (about a factor of 2) but in the relativistic 
+limit the effect is very strong.
+
+\textbf{Reading material:}
+\begin{itemize}
+\item http://iopscience.iop.org/0004-637X/526/2/697
+\item https://aip.scitation.org/doi/full/10.1063/1.4825236
+\item wikipedia article on GRBs
+\end{itemize}
+
+\subsection{Tasks}
+
+While reading the material, do not focus on every detail and try instead to 
+understand the following topics and summarise them in your report and presentation:
+\begin{itemize}
+\item What are GRBs?
+\item What is the role of acceleration?
+\item What is the concept of acceleration associated to GRBs?
+\end{itemize}
+
+\subsubsection{Classical Electron-Positron counter-streaming instabilities}
+\begin{itemize}
+\item Based on the Vlasov-Maxwell system compute the dispersion relation for the two-stream or filamentation instability
+\item Solve the dispersion relation for the maximum growth rate
+\item Using the simulation scripts provided, observe the instability by monitoring 
+the electric or magnetic energy and compare to the analytic results
+\item  Monitor the velocity distribution function during the simulation
+\end{itemize}
+
+\subsubsection{Relativistic Electron-Positron counter-streaming instabilities}
+\begin{itemize}
+\item Based on the Vlasov-Maxwell system compute the dispersion relation for the relativistic two-stream or filamentation instability
+\item Solve the dispersion relation for the maximum growth rate
+\item Using the simulation scripts provided, observe the instability by monitoring 
+the electric or magnetic energy and compare to the analytic results
+\item  Monitor the velocity distribution function during the simulation
+\end{itemize}
+
+\subsubsection{Classification of instabilities in the classical and relativistic limit (and beyond)}
+\begin{itemize}
+\item Based on the Vlasov-Maxwell system compute the dispersion relation for the classical and relativistic two-stream and filamentation instabilities
+\item Solve the dispersion relation for the maximum growth rate
+\item Classify the dominant instability depending on the regime
+\item Beyond special relativity: what is the effect of gravity? (https://doi.org/10.1103/PhysRevD.51.6692)
+\end{itemize}
+
+\newpage
+
+\section{Magnetohydrodynamic Waves in a Magnetic Slab}
+ {\bf Contact Person: } David Pascoe (david.pascoe@kuleuven.be)\\
+
+
+\subsection{Background}
+
+Plasmas support several different magnetohydrodynamic (MHD) wave modes.
+A key topic of research is how MHD waves behave in non-uniform plasmas and one of the most basic structures we may consider is a 2D magnetic slab.
+This supports several different wave modes and are used to explain observed oscillations of plasma structures, such as those in the solar atmosphere.
+
+%\subsubsection{Example reading material}
+%
+%\begin{itemize}
+%\item Plasma Physics, Richard Fitzpatrick (available online).
+%\item Introduction to Plasma Dynamics, Giovanni Lapenta.
+%\item Principles of Plasma Physics, N.A Krall, A.W. Trivelpiece
+%\end{itemize}
+
+\subsection{Tasks}
+We will consider a magnetic slab of width $a$ aligned with a straight magnetic field in the $z$-direction.
+In the simplest case the magnetic field strength, plasma density, and gas pressure are described by a Heaviside step function, having values $B_{0}$, $\rho_{0}$, $p_{0}$ inside the slab ($|x| \le a$), and $B_{e}$, $\rho_{e}$, $p_{e}$ outside ($|x| > a$).
+For coronal conditions the slab will be a waveguide for $\rho_{0} > \rho_{e}$ but the condition of total pressure balance should be satisfied across the slab.
+
+\begin{enumerate}
+\item {\bf Background:}
+Linearise the MHD equations to obtain the dispersion relations for MHD waves in a uniform medium.
+Familiarise yourself with the properties of the waves and parameters such as the sound speed, Alfv\'en speed, and plasma beta.
+Following e.g. Edwin \& Roberts (1982, Solar Physics, 76, 239) consider the linearised MHD equations to obtain the dispersion relation for 
+the axisymmetric fast mode of a magnetic slab as
+
+\begin{equation*}
+\rho_{e} \left(k^2 C_{Ae}^2 - \omega^2 \right) m_{0} \tanh{\left(m_{0} a \right)} + \rho_{0} \left(k^2 C_{A0}^2 - \omega^2 \right) m_{e} = 0.
+\end{equation*}
+
+
+\item {\bf Analytical Method:}
+
+Consider the case of a magnetic slab with finite plasma beta $\beta_{0}$ embedded in a low-beta environment $\beta_{e} \approx 0$, such as the solar corona.
+Choose values of the background parameters appropriate for the solar corona and describe the equilibrium profiles of density and magnetic field for a chosen density contrast ratio $\rho_{0}/\rho_{e}$ and internal plasma beta $\beta_{0}$.
+Plot the dispersion relation for axisymmetric fast MHD waves in the slab and investigate the nature of the cut-off wavenumber in the limit $k_{z} \to 0$.
+
+
+\item {\bf Numerical Method:}
+The transverse velocity perturbation $\tilde{v_x}$ for fast modes may be written in the general form
+\begin{equation*}
+\frac{d^2 \tilde{v_x}}{d x^2} + \kappa^2 \tilde{v_x} = 0
+\end{equation*}
+with the appropriate definition of $\kappa$.
+This second order ODE may be written as a system of first order ODEs and solved numerically (e.g. \textsc{RK4} with shooting method).
+Check the accuracy of your numerical method by reproducing the behaviour of the analytical dispersion relation.
+
+
+\item {\bf Numerical Study:}
+The problem may be extended to solve for slab density profiles without a known analytical solution.
+Replace the step function density profile with a smooth profile described by a function which allows the steepness to be varied.
+Apply the numerical method to investigate the effect of the density profile smoothness on the behaviour of the cut-off wavenumber.
+
+\end{enumerate}
+
+\newpage
+\section{Global waves in the solar corona}
+ {\bf Contact Person: } Andrey Afanasyev (andrei.afanasev@kuleuven.be)\\
+ 
+ In the 1960s, American astronomer Gail Moreton observed waves propagating on the solar disk and visible in H$\alpha$ spectral line. They seemed to be generated by solar flares and were seen as arc-shaped bright fronts. Later, those waves were interpreted by Japanese theoretician Yutaka Uchida as the chromospheric manifestation of an expanding coronal wavefront of fast magnetoacoustic nature. In the 1990s, SOHO spacecraft allowed solar physicists to discover coronal counterparts of Moreton waves. Today we know that global coronal wavefronts are generated by solar eruptions and often accompany spectacular phenomena called coronal mass ejections, which can affect significantly the Earth's magnetosphere and our life.
+ 
+ The project focuses on the problem of propagation of global wavefronts and their interaction with non-uniformities of the solar corona and includes theoretical understanding of MHD modes and their nonlinear dynamics, and numerical modelling of the wave propagation.
+ 
+\subsection{Reading material}
+\begin{itemize}
+\item Introduction to Plasma Dynamics by G. Lapenta
+\item Introduction to Plasma Astrophysics and Magentohydrodynamics by M. Goossens
+\item Plasma Physics by R. Fitzpatrick (available online)
+\item Theoretical Foundations of Nonlinear Acoustics by O.V. Rudenko and S.I. Soluyan 
+\item Physics of Shock Waves and High-Temperature Hydrodynamic Phenomena by Ya.B. Zel'dovich and Yu.P. Raizer
+\item Propagation of a Global Coronal Wave and Its Interaction with Large-Scale Coronal Magnetic Structures by A.N. Afanasyev and A.N. Zhukov, 2018, Astron \& Astrophys. 614 A139. \\ https://doi.org/10.1051/0004-6361/201731908
+\item Large-Scale Globally Propagating Coronal Waves by A. Warmuth, 2015, Living Rev. Sol. Phys. 12 3. https://doi.org/10.1007/lrsp-2015-3
+\item http://www.amrvac.org/
+%\item Introduction to Plasma Dynamics, Giovanni Lapenta.
+\end{itemize}
+\subsection{Tasks}
+\begin{itemize}
+\item {\bf Theoretical Task}: Understanding linear MHD waves (single-fluid approximation): fast, slow, and Alfven modes. Analysis of the dispersion relation. Plotting polar diagrams for the phase and group speeds.
+\item {\bf Theoretical Task}: Understanding nonlinear effects in wave propagation. Derivation of Burgers equation for fast-mode MHD waves. Analysis of the evolution of nonlinear waves and formation of shocks.
+\item {\bf Numerical Task}: Numerical simulations of the propagation of global coronal waves and their interaction with large-scale structures with MPI-AMRVAC. 
+
+\end{itemize}
+
+\newpage
+\section{Amplification of magnetic field in plasma : Dynamo in the Sun}
+ {\bf Contact Person: } Vaibhav Pant (vaibhav.pant@kuleuven.be)\\
+ 
+ 
+ In 1600 AD, William Gilbert suggested that the Earth behaves as a giant magnet and in 1908 AD, Hale established the presence of magnetic field in the Sun using Zeeman splitting of sunspots spectra. Since then, one of the major achievements in the astronomy of twentieth century is to establish that the magnetic fields are ubiquitous in the universe. Magnetic fields in the plasma without any plasma motions decay steadily with time. For example decay time of earth's magnetic field is $\sim$10$^{5}$ years. However, we know that the earth's magnetic field has lasted for much longer time. Thus there must be some mechanism to amplify or sustain the magnetic fields. Similarly, the decay time of the Sun's magnetic field is $\sim$10$^{11}$ years, which is longer than the age of the Sun but we know that the Sun's magnetic field reverses every 11 years. Therefore, we need a mechanism that can make the solar magnetic field oscillatory.\\
+ Dynamo theory is the study of the amplification of the existing magnetic field in the plasma. It is important to understand the mechanism of the amplification of magnetic fields in astronomical bodies. In this project, we will focus on the dynamo processes operating inside the Sun.
+\subsection{Reading material}
+\begin{itemize}
+\item The physics of fluids and plasmas by Arnab Rai Choudhuri
+\item Magnetic field generation in electrically conducting fluids by H.K Moffatt
+\item An elementary introduction to solar dynamo theory, Arnab Rai Choudhuri (available online)
+\item Chatterjee et al, 2004, A\&A, 427, 1019
+\item Plasma Physics, Richard Fitzpatrick
+%\item Introduction to Plasma Dynamics, Giovanni Lapenta.
+\end{itemize}
+\subsection{Tasks}
+\begin{itemize}
+\item {\bf Theoretical Task}: Understanding the homopolar generator and deriving anti-dynamo theorems to constrain the velocity fields required for a dynamo to work. Three different anti-dynamo solutions will be studied.
+\item {\bf Theoretical task}: Parker's idea of mean field magnetohydrodynamics (MHD). Understanding the role of turbulence in generating magnetic fields.
+\item {\bf Analytic Task}: Deriving periodic solution of the dynamo equation {\it i.e}, equatorward propagation of solar magnetic fields. Understanding the conditions for $\alpha \omega$ dynamo and $\alpha^{2}$ dynamos.
+\item {\bf Numerical Task}: Including meridional circulation and numerically solving the flux transport dynamo in with realistic boundary conditions. 
+\item {\bf Numerical Task}: Generating the 11 year sunspot cycle, meridional streamlines contours, rotation profile, the butterfly diagram, radial magnetic field and comparing them with observations.
+\end{itemize}
+
+
+\end{document}

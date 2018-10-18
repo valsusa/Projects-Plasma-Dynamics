@@ -1,0 +1,58 @@
+\documentclass[11pt]{article}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+%\singlespacing
+%\onehalfspacing
+%\doublespacing
+%\setstretch{1.1}
+\usepackage{comment}
+\usepackage{xcolor}
+\definecolor{granata}{HTML}{831d1c}
+\definecolor{kulblue}{HTML}{116E8A}
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\fancypagestyle{myheader}{%
+  \fancyhf{}% Clear all headers/footers
+ % \fancyhead[C]{ \color{granataMy header}% Header Centred
+  \fancyhead[RE, RO]{\color{kulblue}Introduction to Plasma Dynamics}
+\fancyhead[LO,LE]{\color{kulblue}  Projects }
+  \fancyfoot[C]{\color{kulblue} -\thepage-}% Footer Centred
+  \renewcommand{\headrulewidth}{2pt}% 2pt header rule
+  \renewcommand{\headrule}{\hbox to\headwidth{%
+    \color{kulblue}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{0pt}% No footer rule
+ % \renewcommand{\footrule}{\hbox to\headwidth{%
+  %  \color{granata}\leaders\hrule height \footrulewidth\hfill}}
+}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+
+\begin{document}
+\pagestyle{myheader}
+\title{Projects Plasma Dynamics}
+\section{Amplification of magnetic field in plasma : Dynamo in the Sun}
+ {\bf Contact Person: } Vaibhav Pant (vaibhav.pant@kuleuven.be)\\
+ 
+ 
+ In 1600 AD, William Gilbert suggested that the Earth behaves as a giant magnet and in 1908 AD, Hale established the presence of magnetic field in the Sun using Zeeman splitting of sunspots spectra. Since then, one of the major achievements in the astronomy of twentieth century is to establish that the magnetic fields are ubiquitous in the universe. Magnetic fields in the plasma without any plasma motions decay steadily with time. For example decay time of earth's magnetic field is $\sim$10$^{5}$ years. However, we know that the earth's magnetic field has lasted for much longer time. Thus there must be some mechanism to amplify or sustain the magnetic fields. Similarly, the decay time of the Sun's magnetic field is $\sim$10$^{11}$ years, which is longer than the age of the Sun but we know that the Sun's magnetic field reverses every 11 years. Therefore, we need a mechanism that can make the solar magnetic field oscillatory.\\
+ Dynamo theory is the study of the amplification of the existing magnetic field in the plasma. It is important to understand the mechanism of the amplification of magnetic fields in astronomical bodies. In this project, we will focus on the dynamo processes operating inside the Sun.
+\subsubsection{Reading material}
+\begin{itemize}
+\item The physics of fluids and plasmas by Arnab Rai Choudhuri
+\item Magnetic field generation in electrically conducting fluids by H.K Moffatt
+\item An elementary introduction to solar dynamo theory, Arnab Rai Choudhuri (available online)
+\item Chatterjee et al, 2004, A\&A, 427, 1019
+\item Plasma Physics, Richard Fitzpatrick
+%\item Introduction to Plasma Dynamics, Giovanni Lapenta.
+\end{itemize}
+\subsubsection{Tasks}
+\begin{itemize}
+\item {\bf Theoretical Task}: Understanding the homopolar generator and deriving anti-dynamo theorems to constrain the velocity fields required for a dynamo to work. Three different anti-dynamo solutions will be studied.
+\item {\bf Theoretical task}: Parker's idea of mean field magnetohydrodynamics (MHD). Understanding the role of turbulence in generating magnetic fields.
+\item {\bf Analytic Task}: Deriving periodic solution of the dynamo equation {\it i.e}, equatorward propagation of solar magnetic fields. Understanding the conditions for $\alpha \omega$ dynamo and $\alpha^{2}$ dynamos.
+\item {\bf Numerical Task}: Including meridional circulation and numerically solving the flux transport dynamo in with realistic boundary conditions. 
+\item {\bf Numerical Task}: Generating the 11 year sunspot cycle, meridional streamlines contours, rotation profile, the butterfly diagram, radial magnetic field and comparing them with observations.
+
+\end{itemize}
+\end{document}
